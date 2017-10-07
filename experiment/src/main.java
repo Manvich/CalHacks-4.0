@@ -39,12 +39,13 @@ public class main {
 
     }
 
-    public static ArrayList createPossibleIndice(int[][] board, ArrayList<ArrayList> object) {
+    public static ArrayList createPossibleIndices(int[][] board, ArrayList<ArrayList> object) {
         ArrayList answer = new ArrayList();
         for (int i = 0; i < 9; i++) {
             for (int j = 0; j < 9; j++) {
-                if (board[i][j] > 0) {
-
+                if (board[i][j] == 0) {
+                    int[] index = {i, j};
+                    answer.add(index);
                 }
             }
         }
