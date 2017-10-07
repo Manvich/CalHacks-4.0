@@ -1,3 +1,5 @@
+import sun.jvm.hotspot.utilities.IntArray;
+
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
@@ -39,7 +41,7 @@ public class main {
 
     }
 
-    public static ArrayList createPossibleIndices(int[][] board, ArrayList<ArrayList> object) {
+    public static ArrayList createPossibleIndices(int[][] board) {
         ArrayList answer = new ArrayList();
         for (int i = 0; i < 9; i++) {
             for (int j = 0; j < 9; j++) {
@@ -49,6 +51,7 @@ public class main {
                 }
             }
         }
+        return answer;
     }
 
 
