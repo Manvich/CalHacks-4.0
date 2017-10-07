@@ -1,4 +1,4 @@
-(function createBoard() {
+function init() {
 	var canvas = document.getElementById('myCanvas');
 	var context = canvas.getContext('2d');
 	context.beginPath();
@@ -18,5 +18,14 @@
 		context.lineTo(450,x*50);
 	}
 	context.stroke();
-	alert('finished');
-});
+}
+
+function isNumber(evt) {
+	evt = (evt) ? evt : window.event;
+	var charCode = (evt.which) ? evt.which : evt.keyCode;
+	return !(charCode > 31 && (charCode < 48 || charCode > 57));
+}
+
+function check() {
+	alert('meep mop!');
+}
