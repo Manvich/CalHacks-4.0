@@ -1,12 +1,41 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>Sudoku</title>
-</head>
-<body>
+	<head>
+		<title>Sudoku</title>
+	</head>
+	
+	<body>
+		<h1>SUDOKU!!!</h1>
+		<p>Welcome to the sudoku arena.</p>
+		<canvas id="myCanvas" width="450" height="450"></canvas>
+		<script>
+			var canvas = document.getElementById('myCanvas');
+			var context = canvas.getContext('2d');
+			
+			context.beginPath();
+			for (var x = 0; x < 10; x++) {
+				context.moveTo(x*50,0);
+				context.lineTo(x*50,450);
+				context.moveTo(0, x*50);
+				context.lineTo(450,x*50);
+			}
+			context.stroke();
+			context.beginPath();
+			context.lineWidth=5;
+			for (var x = 0; x < 10; x+=3) {
+				context.moveTo(x*50,0);
+				context.lineTo(x*50,450);
+				context.moveTo(0, x*50);
+				context.lineTo(450,x*50);
+			}
+			context.stroke();
+		</script>
+	</body>
 
-<h1>SUDOKU!!!</h1>
-<p>Welcome to the sudoku arena.</p>
+	<p></p>
+	<button type="button" onclick="alert('whoops')">New Puzzle</button>
+	<p></p>
 
-</body>
+	<script>document.write("heyo mayo");</script>
+	<noscript>Please enable Javascript support.</noscript>
 </html>
