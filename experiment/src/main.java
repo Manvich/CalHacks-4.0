@@ -2,6 +2,7 @@ import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Collections;
+import java.util.Random;
 
 /**
  * Created by Lin on 10/7/17.
@@ -22,12 +23,25 @@ public class main {
 
 
         int[][] board = new int[9][9];
+
         while (anyzeros(board)) {
             if (noMorePossibleValues(object)) {
                 break;
             } else {
                 ArrayList<int[]> possibleIndices = createPossibleIndices(board, object);
                 ArrayList<int[]> bestIndices = chooseBestIndices(possibleIndices, object);
+                int n = (int)(Math.random()*bestIndices.size());
+                int[] currentindex = bestIndices.get(n);
+                ArrayList<Integer> possibleValues = object.get(9*currentindex[0] + currentindex[1]);
+                int m = (int)(Math.random()*possibleValues.size());
+                int value = possibleValues.get(m);
+
+                board[currentindex[0]][currentindex[1]] = value;
+
+                /*for each row
+                * for each column
+                * for each square*/
+
             }
 
         }
