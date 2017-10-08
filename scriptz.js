@@ -35,7 +35,8 @@ function generateMatrix() {
 	for (var x = 0; x < 9; x++) {
 		matrix[x] = new Array(9);
 		for (var y = 0; y < 9; y++) {
-			matrix[x][y] = parseInt(Math.random()*9, 10);
+			var b = 1 == parseInt(Math.random()*2, 10);
+			matrix[x][y] = b ? parseInt(Math.random()*9, 10) : -1;
 		}
 	}
 	return matrix;
@@ -49,7 +50,7 @@ function displayMatrix(matrix) {
 				var span = document.createElement('span');
 				span.style.fontSize = "45px";
 				span.style.position = 'absolute';
-				span.style.left = (10 +50*x) + 'px';
+				span.style.left = (20 +50*x) + 'px';
 				span.style.top = (116 + (50*y)) + 'px';
 				span.appendChild(temp);
 				document.body.appendChild(span);
@@ -58,7 +59,7 @@ function displayMatrix(matrix) {
 				temp.type = "text";
 				temp.setAttribute('maxlength',1);
 				temp.setAttribute('onkeypress', 'return isNumber(event)');
-				temp.setAttribute('style', 'border-style:none; background-color:transparent; height:45px; width:45px; font-size:45px;');
+				temp.setAttribute('style', 'font-family:"Times New Roman"; text-align:center; border-style:none; background-color:transparent; height:45px; width:45px; font-size:45px;');
 				temp.style.position = 'absolute';
 				temp.style.left = (10 +50*x) + 'px';
 				temp.style.top = (116 + (50*y)) + 'px';
