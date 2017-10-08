@@ -13,11 +13,13 @@ public class Testing{
     @Test
     public void testing1() {
         int[][] testingboard = new int[9][9];
-        ArrayList complete = new ArrayList();
-        for (int i = 0; i < 81; i++){
-            int j, k;
-            j = k = 0;
-            complete.add()
+        ArrayList<int[]> complete = new ArrayList();
+        for (int i = 0; i < 9; i++){
+            for (int j = 0; j < 9; j++){
+                int[] temp = {i, j};
+                complete.add(temp);
+            }
         }
+
     }
 }
