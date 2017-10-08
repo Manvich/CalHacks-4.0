@@ -14,6 +14,10 @@ public class Testing{
     public void testing1() {
         int[][] testingboard = new int[9][9];
         ArrayList complete = new ArrayList();
-
+        for (int i = 0; i < 81; i++){
+            int j, k;
+            j = k = 0;
+            complete.add()
+        }
     }
 }
