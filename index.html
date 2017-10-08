@@ -8,7 +8,7 @@
 		<h1>SUDOKU!!!</h1>
 		<p>Welcome to the sudoku arena.</p>
 		<canvas id="myCanvas" width="450" height="450"></canvas>
-		<script src="scriptz.js" type = "text/javascript"></script>
+		<script src="scriptz.js" type="text/javascript"></script>
 		<script>init();</script>
 	</body><p></p>
 	
@@ -16,6 +16,6 @@
 	<button type="button" onclick="window.location.reload()">New Puzzle</button><p></p>
 	
 	<input style="border-style:none; height:50px; width:50px; font-size:50px;" type="text" maxlength="1" onkeypress="return isNumber(event)"></input>
-
+	<script>displayMatrix(generateMatrix());</script>
 	<noscript>Please enable Javascript support.</noscript>
 </html>
