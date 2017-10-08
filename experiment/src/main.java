@@ -58,17 +58,27 @@ public class main {
     /*from the list of possible indices, choose the ones with the maximum possibilities and return them as
     * a new arraylist*/
     public static ArrayList chooseBestIndices(ArrayList<int[]> possibleIndices, ArrayList<ArrayList> object) {
+
         ArrayList answer = new ArrayList();
         Collections.copy(possibleIndices, answer);
         int max = 0;
+
         for (int i = 0; i < possibleIndices.size(); i ++) {
             int[] current = possibleIndices.get(i);
-
-
+            ArrayList possibleNums = object.get(9*current[0]+current[1]);
+            if (max < possibleNums.size()) {
+                max = possibleNums.size();
+            }
         }
 
-
-
+        for (int i = 0; i < possibleIndices.size(); i ++) {
+            int[] current = possibleIndices.get(i);
+            ArrayList possibleNums = object.get(9*current[0]+current[1]);
+            if (possibleNums.size() == max) {
+                answer.add(current);
+            }
+        }
+        return answer;
     }
 
 
