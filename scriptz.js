@@ -66,6 +66,8 @@ function generateMatrix() {
 			tempPartitions = [];
 		}
 		var row = partitions[parseInt(Math.random()*partitions.length,10)];
+		if (partitions.length == 0)
+			return generateMatrix();
 		for (var y = 0; y < 9; y++) {
 			matrix[x][y] = parseInt(row.charAt(y), 10);
 		}
