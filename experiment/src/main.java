@@ -20,12 +20,12 @@ public class main {
         
 
         int[][] board = new int[9][9];
-        while (true){
+        /*while (true){
             if (noMorePossibleValues(object)) {
                 break;
             } else {
 
-            }
+            }*/
 
 
             /*if(noMorePossibleValues(object)
