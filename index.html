@@ -12,10 +12,9 @@
 		<script>init();</script>
 	</body><p></p>
 	
-	<button type="button" onclick="check()">Check</button><p></p>
+	<button type="button" onclick="check(matrix, textBoxIDs)">Check</button><p></p>
 	<button type="button" onclick="window.location.reload()">New Puzzle</button><p></p>
 	
-	<input style="border-style:none; height:50px; width:50px; font-size:50px;" type="text" maxlength="1" onkeypress="return isNumber(event)"></input>
-	<script>displayMatrix(generateMatrix());</script>
+	<script>var matrix = generateMatrix(); var textBoxIDs = displayMatrix(matrix);</script>
 	<noscript>Please enable Javascript support.</noscript>
 </html>
