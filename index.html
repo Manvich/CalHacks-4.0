@@ -15,6 +15,6 @@
 	<button type="button" onclick="check(matrix, textBoxIDs)">Check</button><p></p>
 	<button type="button" onclick="window.location.reload()">New Puzzle</button><p></p>
 	
-	<script>var matrix = generateMatrix(); var textBoxIDs = displayMatrix(matrix);</script>
+	<script>var matrix = generateMatrix(); var textBoxIDs = displayMatrix(prune(matrix));</script>
 	<noscript>Please enable Javascript support.</noscript>
 </html>
