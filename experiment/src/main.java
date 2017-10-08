@@ -10,7 +10,7 @@ public class main {
 
     public static void main(String[] arg) {
 
-        ArrayList<ArrayList> object = new ArrayList<ArrayList>();
+        ArrayList<ArrayList<Integer>> object = new ArrayList<ArrayList<Integer>>();
         for (int i = 0; i < 81; i++) {
 
             ArrayList<Integer> store = new ArrayList<Integer>();
@@ -22,17 +22,9 @@ public class main {
 
 
         int[][] board = new int[9][9];
-        /*while (true){
-            if (noMorePossibleValues(object)) {
-                break;
-            } else {
+        while (noMorePossibleValues(object)) {
 
-            }*/
-
-
-            /*if(noMorePossibleValues(object)
-            *   break
-            *   else*/
+        }
 
     }
 
@@ -79,7 +71,7 @@ public class main {
 
 
     /*returns true if all the tiles have 1 or less possible values */
-    public static boolean noMorePossibleValues(ArrayList<ArrayList> object) {
+    public static boolean noMorePossibleValues(ArrayList<ArrayList<Integer>> object) {
         boolean answer = true;
         for (int i = 0; i < 81; i++) {
             ArrayList<Integer> current = object.get(i);
