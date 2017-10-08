@@ -22,15 +22,36 @@ public class main {
 
 
         int[][] board = new int[9][9];
-        while (noMorePossibleValues(object)) {
+        while (anyzeros(board)) {
+            if (noMorePossibleValues(object)) {
+                break;
+            } else {
+                ArrayList<int[]> possibleIndices = createPossibleIndices(board, object);
+                ArrayList<int[]> bestIndices = chooseBestIndices(possibleIndices, object);
+            }
 
         }
 
+
+
+
+    }
+    public static boolean anyzeros(int[][] board) {
+        boolean answer = false;
+        for (int i = 0; i < 9; i++) {
+            for (int j = 0; j < 9; j ++) {
+                if (board[i][j] == 0) {
+                    answer = true;
+                    return answer;
+                }
+            }
+        }
+        return answer;
     }
 
 
     /*Returns an ArrayList containing the indices of all empty spaces on the board*/
-    public static ArrayList<int[]> createPossibleIndices(int[][] board, ArrayList<ArrayList> object) {
+    public static ArrayList<int[]> createPossibleIndices(int[][] board, ArrayList<ArrayList<Integer>> object) {
         ArrayList<int[]> answer = new ArrayList<int[]>();
         for (int i = 0; i < 9; i++) {
             for (int j = 0; j < 9; j++) {
@@ -45,7 +66,7 @@ public class main {
 
     /*from the list of possible indices, choose the ones with the maximum possibilities and return them as
     * a new arraylist*/
-    public static ArrayList<int[]> chooseBestIndices(ArrayList<int[]> possibleIndices, ArrayList<ArrayList> object) {
+    public static ArrayList<int[]> chooseBestIndices(ArrayList<int[]> possibleIndices, ArrayList<ArrayList<Integer>> object) {
 
         ArrayList<int[]> answer = new ArrayList<int[]>();
         Collections.copy(possibleIndices, answer);
