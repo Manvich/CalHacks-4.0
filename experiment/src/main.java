@@ -66,7 +66,7 @@ public class main {
         for (int i = 0; i < possibleIndices.size(); i ++) {
             int[] current = possibleIndices.get(i);
             ArrayList possibleNums = object.get(9*current[0]+current[1]);
-            if (max < possibleNums.size()) {
+            if (max < d.size()) {
                 max = possibleNums.size();
             }
         }
