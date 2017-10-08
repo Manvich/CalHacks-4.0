@@ -50,8 +50,8 @@ function displayMatrix(matrix) {
 				var span = document.createElement('span');
 				span.style.fontSize = "45px";
 				span.style.position = 'absolute';
-				span.style.left = (20 +50*x) + 'px';
-				span.style.top = (116 + (50*y)) + 'px';
+				span.style.left = (22 +50*x) + 'px';
+				span.style.top = (114 + (50*y)) + 'px';
 				span.appendChild(temp);
 				document.body.appendChild(span);
 			} else {
@@ -59,7 +59,7 @@ function displayMatrix(matrix) {
 				temp.type = "text";
 				temp.setAttribute('maxlength',1);
 				temp.setAttribute('onkeypress', 'return isNumber(event)');
-				temp.setAttribute('style', 'font-family:"Times New Roman"; text-align:center; border-style:none; background-color:transparent; height:45px; width:45px; font-size:45px;');
+				temp.setAttribute('style', 'color: #0066FF; font-family:"Times New Roman"; text-align:center; border-style:none; background-color:transparent; height:45px; width:45px; font-size:45px;');
 				temp.style.position = 'absolute';
 				temp.style.left = (10 +50*x) + 'px';
 				temp.style.top = (116 + (50*y)) + 'px';
